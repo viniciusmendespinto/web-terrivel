@@ -10,16 +10,37 @@
     <main>
         <div id="formulario">
           <h2>Customer</h2>
-          <form action="/enviar.php" method="POST">
+          <form action="http://terrivel.herokuapp.com/monster" method="GET">
                <label>Nome: 
-                     <input name="nome"></label><br>
+                     <input name="nome" required></label><br><br>
                <label>Email:
-                     <input name="remetente" type="email">
-               </label><br>
+                     <input name="remetente" type="email" required>
+               </label><br><br>
+               <label for="tipoPedras">Tipo de Pedras:</label>
+                     <select name="tipoPedras" id="tipoPedras">
+                        <option value="mar">marroada</option>
+                        <option value="ame" selected>ametista</option>
+                        <option value="top" selected>topazio</option>
+                        <option value="esp" selected>espinela</option>
+                     </select><br><br>
+                <label>Data:
+                      <input name="data" type="date" required></label><br><br>
+                <label>Cor do Céu 1:
+                      <input name="céu1" type="color"></label><br><br>
+                <label>Cor do Céu 2:
+                      <input name="céu2" type="color"></label><br><br> 
+                <label>Número de pedras:
+                      <input name="numero" type="number" min="0" step="1"></label><br><br>
+                <label>Tamanho das pedras:
+                      <input name="tamanho das pedras" type="tamanho" min="1" max="7" step="0.5"></label><br><br>
+                <label>Nome do Monstro: 
+                      <input name="nome do Monstro" text="nomeMonstro" pattern="[A-Z]"></label><br><br>
+                    
+             
 
 
-
-               <input type="submit" value="Enviar">
+               <input type="submit" value="OK">
+               <input type="reset" value="Cancelar">
           </form>
 
         </div>
